@@ -1,7 +1,8 @@
 package com.singlton.demo;
 
 /**
- * 面试的时候小心，别写漏了
+ * 这是一种高效的单例模式，使用内部类的好处是：使用了classLoader加载类时自带锁的机制
+ * 保证了并发实例时单例
  * @author zhangyang
  *
  */

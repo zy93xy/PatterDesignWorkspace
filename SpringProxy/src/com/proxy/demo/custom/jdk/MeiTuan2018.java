@@ -8,13 +8,13 @@ import com.proxy.demo.jdk.Person;
 public class MeiTuan2018 implements InvocationHandler {
 	
 	private Person target;
-	// 获取被代理的对象的信息
+	// 锟斤拷取锟斤拷锟斤拷锟斤拷亩锟斤拷锟斤拷锟斤拷息
 	public Object getInstance(Person target){
 		this.target = target;
 		@SuppressWarnings("rawtypes")
 		Class clazz = target.getClass();
-		System.out.println("被代理对象的class是=="+clazz);
-		return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
+		System.out.println("锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷class锟斤拷=="+clazz);
+		return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), (java.lang.reflect.InvocationHandler) this);
 	}
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
